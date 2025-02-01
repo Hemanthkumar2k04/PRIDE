@@ -1,0 +1,214 @@
+/* General Container Styling */
+.container {
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+  
+  /* Title */
+  h2 {
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: #007BFF; /* Blue color */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 2px; /* Add space between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+    background: linear-gradient(to right, #0066cc, #4c8bf5); /* Gradient */
+    -webkit-background-clip: text; /* Webkit-specific background clip */
+    background-clip: text; /* Standard background clip */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  h2:hover {
+    color: #0056b3; /* Slightly darker blue color on hover */
+  }
+  
+  h3 {
+    font-size: 1.8rem; /* Slightly larger font size */
+    font-weight: 600; /* Semi-bold font */
+    color: #0056b3; /* Blue color */
+    text-align: center; /* Center the heading */
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+    letter-spacing: 1px; /* Slightly spaced-out letters */
+    margin-bottom: 20px; /* Space below the heading */
+    background: linear-gradient(to left, #0056b3, #4c8bf5); /* Gradient effect */
+    -webkit-background-clip: text; /* Webkit-specific background clip */
+    background-clip: text; /* Standard background clip */
+    color: transparent; /* Make the text color transparent to show the gradient */
+    padding: 10px; /* Some space around the text */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  h3:hover {
+    color: #003f7f; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+  }
+  
+  /* Card for Topic Selection */
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h5 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  /* Grid Layout for Topic Buttons */
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  button {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Selection Bar */
+  .selection-bar {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .badge .btn-close {
+    padding: 0.2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .badge .btn-close:hover {
+    opacity: 1;
+  }
+  
+  /* Buttons (Generate and Custom Prompt) */
+  button.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+  
+  button.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+  
+  button.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Results Area */
+  .bg-white {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      padding: 15px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .badge {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+  
+    button.btn-success,
+    button.btn-outline-primary {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  }
+  

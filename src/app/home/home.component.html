@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Choose Your Project Topics</h2>
+  
+    <!-- Card for Topic Selection -->
+    <div class="card">
+      <h3>Select your topics</h3>
+      <div class="topic-grid">
+        <button *ngFor="let topic of topics" 
+                [class.active]="selectedTopics.includes(topic)" 
+                (click)="toggleSelection(topic)">
+          {{ topic }}
+        </button>
+      </div>
+    </div>
+  
+    <!-- Selection Bar -->
+    <div class="selection-bar mt-3">
+      <div *ngFor="let topic of selectedTopics" class="badge">
+        {{ topic }}
+        <button class="btn-close" (click)="removeTopic(topic)">&times;</button>
+      </div>
+    </div>
+  
+    <!-- Buttons (Generate and Custom Prompt) -->
+    <div class="mt-4">
+      <button class="btn btn-success" (click)="generateIdea()">Generate Project Idea</button>
+      <button class="btn btn-outline-primary ml-2" (click)="openCustomPrompt()">Write Your Own Prompt</button>
+    </div>
+  
+    <!-- Results Area -->
+    <div *ngIf="projectIdea" class="bg-white mt-4">
+      <h5>Generated Project Idea</h5>
+      <p>{{ projectIdea }}</p>
+      <h6>Relevant Research Papers</h6>
+      <ul>
+        <li *ngFor="let paper of researchPapers">
+          <a [href]="paper.link" target="_blank">{{ paper.title }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
